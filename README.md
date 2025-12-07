@@ -2,11 +2,9 @@
 
 ## 使用说明
 
-1. 复制本目录 (`backend/templates/homework01`) 到项目中的其他位置（例如 `backend/homework01`）。
-2. 在新位置打开终端，确保 `go.mod` 存在。
-3. 编辑 `homework.go`，完成各个函数的实现。
-4. 在本地运行 `go test -v` 验证代码。
-5. 提交代码到你的分支。GitHub Actions 会自动运行测试。
+1. 编辑 `homework.go`，完成各个函数的实现。
+2. 在本地运行 `go test -v` 验证代码。
+3. 提交代码到你的分支。GitHub Actions 会自动运行测试。
 
 ## 题目列表
 
