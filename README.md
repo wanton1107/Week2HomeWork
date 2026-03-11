@@ -1,4 +1,4 @@
-# Go Homework 01 Template
+## Go Homework 01
 
 ## 使用说明
 
@@ -17,3 +17,5 @@
 7. Merge Intervals (合并区间)
 8. Two Sum (两数之和)
 
+## Go Homework 02
+在homework2路径下
