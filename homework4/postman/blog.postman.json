@@ -1,0 +1,892 @@
+{
+    "info": {
+        "name": "blog",
+        "description": "",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Auth",
+            "description": "",
+            "item": [
+                {
+                    "name": "用户登录",
+                    "description": "",
+                    "event": [],
+                    "auth": {},
+                    "request": {
+                        "auth": {},
+                        "method": "POST",
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/auth/login",
+                            "path": [
+                                "auth",
+                                "login"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "成功",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/auth/login",
+                                    "path": [
+                                        "auth",
+                                        "login"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"password\": \"123321\",\r\n    \"username\": \"wanton\"\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "cookie": [],
+                            "status": "Unauthorized",
+                            "code": 401,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Thu, 19 Mar 2026 05:13:37 GMT"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "38"
+                                }
+                            ],
+                            "body": "{\"message\":\"用户名或密码错误\"}"
+                        }
+                    ],
+                    "protocolProfileBehavior": {
+                        "strictSSL": false,
+                        "followRedirects": true
+                    }
+                },
+                {
+                    "name": "用户注册",
+                    "description": "",
+                    "event": [],
+                    "auth": {},
+                    "request": {
+                        "auth": {},
+                        "method": "POST",
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/auth/register",
+                            "path": [
+                                "auth",
+                                "register"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "成功",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/auth/register",
+                                    "path": [
+                                        "auth",
+                                        "register"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"password\": \"123321\",\r\n    \"username\": \"wanton\"\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "cookie": [],
+                            "status": "Created",
+                            "code": 201,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Thu, 19 Mar 2026 05:14:09 GMT"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "26"
+                                }
+                            ],
+                            "body": "{\"message\":\"注册成功\"}"
+                        }
+                    ],
+                    "protocolProfileBehavior": {
+                        "strictSSL": false,
+                        "followRedirects": true
+                    }
+                }
+            ],
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "exec": [],
+                        "type": "text/javascript",
+                        "packages": {}
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [],
+                        "type": "text/javascript",
+                        "packages": {}
+                    }
+                }
+            ],
+            "auth": {}
+        },
+        {
+            "name": "Post",
+            "description": "",
+            "item": [
+                {
+                    "name": "获取文章列表",
+                    "description": "",
+                    "event": [],
+                    "auth": {},
+                    "request": {
+                        "auth": {},
+                        "method": "GET",
+                        "body": {},
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/posts",
+                            "path": [
+                                "posts"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "成功",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/posts",
+                                    "path": [
+                                        "posts"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "body": {
+                                    "undefined": ""
+                                }
+                            },
+                            "cookie": [],
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "text",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Thu, 19 Mar 2026 05:28:28 GMT"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "319"
+                                }
+                            ],
+                            "body": "[{\"id\":3,\"title\":\"区块链基础概念\",\"content\":\"积分抵扣介绍费哦文件发你的凯瑟琳房间里\",\"authorId\":1,\"author\":{\"id\":1,\"username\":\"wanton\",\"createdAt\":\"2026-03-19T05:14:09.953Z\",\"updatedAt\":\"2026-03-19T05:14:09.953Z\"},\"createdAt\":\"2026-03-19T05:28:25.378Z\",\"updatedAt\":\"2026-03-19T05:28:25.378Z\"}]"
+                        }
+                    ],
+                    "protocolProfileBehavior": {
+                        "strictSSL": false,
+                        "followRedirects": true
+                    }
+                },
+                {
+                    "name": "新增文章",
+                    "description": "",
+                    "event": [],
+                    "auth": {},
+                    "request": {
+                        "auth": {},
+                        "method": "POST",
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/posts",
+                            "path": [
+                                "posts"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "成功",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoid2FudG9uIiwiaXNzIjoiaG9tZXdvcms0LWJsb2ciLCJleHAiOjE3NzM5ODM2NjgsImlhdCI6MTc3Mzg5NzI2OH0.vhIsTU3vSC20aJAEVE_FGN1-mtGpg_ATNFRvPtqtmYo",
+                                        "disabled": false
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/posts",
+                                    "path": [
+                                        "posts"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"content\": \"积分抵扣介绍费哦文件发你的凯瑟琳房间里\",\r\n    \"title\": \"区块链基础概念\"\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "cookie": [],
+                            "status": "Created",
+                            "code": 201,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Thu, 19 Mar 2026 05:28:25 GMT"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "317"
+                                }
+                            ],
+                            "body": "{\"id\":3,\"title\":\"区块链基础概念\",\"content\":\"积分抵扣介绍费哦文件发你的凯瑟琳房间里\",\"authorId\":1,\"author\":{\"id\":1,\"username\":\"wanton\",\"createdAt\":\"2026-03-19T05:14:09.953Z\",\"updatedAt\":\"2026-03-19T05:14:09.953Z\"},\"createdAt\":\"2026-03-19T05:28:25.378Z\",\"updatedAt\":\"2026-03-19T05:28:25.378Z\"}"
+                        }
+                    ],
+                    "protocolProfileBehavior": {
+                        "strictSSL": false,
+                        "followRedirects": true
+                    }
+                },
+                {
+                    "name": "获取文章详情",
+                    "description": "",
+                    "event": [],
+                    "auth": {},
+                    "request": {
+                        "auth": {},
+                        "method": "GET",
+                        "body": {},
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/posts/:id",
+                            "path": [
+                                "posts",
+                                ":id"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "",
+                                    "description": "post id",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "成功",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/posts/:id",
+                                    "path": [
+                                        "posts",
+                                        ":id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "id",
+                                            "value": "1",
+                                            "description": "ID 编号",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "id",
+                                            "value": "",
+                                            "description": "post id",
+                                            "disabled": false
+                                        }
+                                    ]
+                                },
+                                "body": {
+                                    "undefined": ""
+                                }
+                            },
+                            "cookie": [],
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "text",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Thu, 19 Mar 2026 05:19:58 GMT"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "307"
+                                }
+                            ],
+                            "body": "[{\"id\":1,\"title\":\"遍及吮总共按哇塞噢偏偏因为一概\",\"content\":\"区块链基础概念\",\"authorId\":1,\"author\":{\"id\":1,\"username\":\"wanton\",\"createdAt\":\"2026-03-19T05:14:09.953Z\",\"updatedAt\":\"2026-03-19T05:14:09.953Z\"},\"createdAt\":\"2026-03-19T05:17:59.033Z\",\"updatedAt\":\"2026-03-19T05:17:59.033Z\"}]"
+                        }
+                    ],
+                    "protocolProfileBehavior": {
+                        "strictSSL": false,
+                        "followRedirects": true
+                    }
+                },
+                {
+                    "name": "更新文章内容",
+                    "description": "",
+                    "event": [],
+                    "auth": {},
+                    "request": {
+                        "auth": {},
+                        "method": "PUT",
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/posts/:id",
+                            "path": [
+                                "posts",
+                                ":id"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "",
+                                    "description": "post id",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "成功",
+                            "originalRequest": {
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoid2FudG9uIiwiaXNzIjoiaG9tZXdvcms0LWJsb2ciLCJleHAiOjE3NzM5ODM2NjgsImlhdCI6MTc3Mzg5NzI2OH0.vhIsTU3vSC20aJAEVE_FGN1-mtGpg_ATNFRvPtqtmYo",
+                                        "disabled": false
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/posts/:id",
+                                    "path": [
+                                        "posts",
+                                        ":id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "key": "id",
+                                            "value": "1",
+                                            "description": "post id",
+                                            "disabled": false
+                                        }
+                                    ]
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"content\": \"这飞机打瞌睡放进口袋里实际付款了的时间\",\r\n    \"title\": \"一篇文章\"\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "cookie": [],
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Thu, 19 Mar 2026 05:21:49 GMT"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "308"
+                                }
+                            ],
+                            "body": "{\"id\":1,\"title\":\"一篇文章\",\"content\":\"这飞机打瞌睡放进口袋里实际付款了的时间\",\"authorId\":1,\"author\":{\"id\":1,\"username\":\"wanton\",\"createdAt\":\"2026-03-19T05:14:09.953Z\",\"updatedAt\":\"2026-03-19T05:14:09.953Z\"},\"createdAt\":\"2026-03-19T05:17:59.033Z\",\"updatedAt\":\"2026-03-19T05:21:49.595Z\"}"
+                        }
+                    ],
+                    "protocolProfileBehavior": {
+                        "strictSSL": false,
+                        "followRedirects": true
+                    }
+                },
+                {
+                    "name": "删除文章",
+                    "description": "",
+                    "event": [],
+                    "auth": {},
+                    "request": {
+                        "auth": {},
+                        "method": "DELETE",
+                        "body": {},
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/posts/:id",
+                            "path": [
+                                "posts",
+                                ":id"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "",
+                                    "description": "post id",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "成功",
+                            "originalRequest": {
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoid2FudG9uIiwiaXNzIjoiaG9tZXdvcms0LWJsb2ciLCJleHAiOjE3NzM5ODM2NjgsImlhdCI6MTc3Mzg5NzI2OH0.vhIsTU3vSC20aJAEVE_FGN1-mtGpg_ATNFRvPtqtmYo",
+                                        "disabled": false
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/posts/:id",
+                                    "path": [
+                                        "posts",
+                                        ":id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "key": "id",
+                                            "value": "2",
+                                            "description": "post id",
+                                            "disabled": false
+                                        }
+                                    ]
+                                },
+                                "body": {
+                                    "undefined": ""
+                                }
+                            },
+                            "cookie": [],
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Thu, 19 Mar 2026 05:27:40 GMT"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "26"
+                                }
+                            ],
+                            "body": "{\"message\":\"删除成功\"}"
+                        }
+                    ],
+                    "protocolProfileBehavior": {
+                        "strictSSL": false,
+                        "followRedirects": true
+                    }
+                }
+            ],
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "exec": [],
+                        "type": "text/javascript",
+                        "packages": {}
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [],
+                        "type": "text/javascript",
+                        "packages": {}
+                    }
+                }
+            ],
+            "auth": {}
+        },
+        {
+            "name": "Comment",
+            "description": "",
+            "item": [
+                {
+                    "name": "获取指定文章的评论",
+                    "description": "",
+                    "event": [],
+                    "auth": {},
+                    "request": {
+                        "auth": {},
+                        "method": "GET",
+                        "body": {},
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/posts/:id/comments",
+                            "path": [
+                                "posts",
+                                ":id",
+                                "comments"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "",
+                                    "description": "post id",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "成功",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/posts/:id/comments",
+                                    "path": [
+                                        "posts",
+                                        ":id",
+                                        "comments"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "key": "id",
+                                            "value": "3",
+                                            "description": "post id",
+                                            "disabled": false
+                                        }
+                                    ]
+                                },
+                                "body": {
+                                    "undefined": ""
+                                }
+                            },
+                            "cookie": [],
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "text",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Thu, 19 Mar 2026 05:29:15 GMT"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "259"
+                                }
+                            ],
+                            "body": "[{\"id\":1,\"content\":\"文章写的不错\",\"postId\":3,\"authorId\":1,\"author\":{\"id\":1,\"username\":\"wanton\",\"createdAt\":\"2026-03-19T05:14:09.953Z\",\"updatedAt\":\"2026-03-19T05:14:09.953Z\"},\"createdAt\":\"2026-03-19T05:29:06.637Z\",\"updatedAt\":\"2026-03-19T05:29:06.637Z\"}]"
+                        }
+                    ],
+                    "protocolProfileBehavior": {
+                        "strictSSL": false,
+                        "followRedirects": true
+                    }
+                },
+                {
+                    "name": "新增评论",
+                    "description": "",
+                    "event": [],
+                    "auth": {},
+                    "request": {
+                        "auth": {},
+                        "method": "POST",
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/posts/:id/comments",
+                            "path": [
+                                "posts",
+                                ":id",
+                                "comments"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "",
+                                    "description": "post id",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "成功",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoid2FudG9uIiwiaXNzIjoiaG9tZXdvcms0LWJsb2ciLCJleHAiOjE3NzM5ODM2NjgsImlhdCI6MTc3Mzg5NzI2OH0.vhIsTU3vSC20aJAEVE_FGN1-mtGpg_ATNFRvPtqtmYo",
+                                        "disabled": false
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/posts/:id/comments",
+                                    "path": [
+                                        "posts",
+                                        ":id",
+                                        "comments"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "key": "id",
+                                            "value": "3",
+                                            "description": "post id",
+                                            "disabled": false
+                                        }
+                                    ]
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"content\": \"文章写的不错\"\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "cookie": [],
+                            "status": "Created",
+                            "code": 201,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Thu, 19 Mar 2026 05:29:06 GMT"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "257"
+                                }
+                            ],
+                            "body": "{\"id\":1,\"content\":\"文章写的不错\",\"postId\":3,\"authorId\":1,\"author\":{\"id\":1,\"username\":\"wanton\",\"createdAt\":\"2026-03-19T05:14:09.953Z\",\"updatedAt\":\"2026-03-19T05:14:09.953Z\"},\"createdAt\":\"2026-03-19T05:29:06.637Z\",\"updatedAt\":\"2026-03-19T05:29:06.637Z\"}"
+                        }
+                    ],
+                    "protocolProfileBehavior": {
+                        "strictSSL": false,
+                        "followRedirects": true
+                    }
+                }
+            ],
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "exec": [],
+                        "type": "text/javascript",
+                        "packages": {}
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [],
+                        "type": "text/javascript",
+                        "packages": {}
+                    }
+                }
+            ],
+            "auth": {}
+        }
+    ],
+    "variable": [],
+    "event": [],
+    "auth": {}
+}
